@@ -1,0 +1,19 @@
+#N canvas 556 93 768 441 10;
+#X obj -262 124 gemwin;
+#X msg -261 11 create;
+#X msg -224 39 destroy;
+#X obj -173 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text -251 -25 Start Render;
+#X obj 39 116 rectangle 4 4;
+#X obj 39 50 pix_video;
+#X obj 39 83 pix_texture;
+#X text 33 -22 Camera Input;
+#X obj 39 17 gemhead;
+#X text 131 50;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 9 0 6 0;

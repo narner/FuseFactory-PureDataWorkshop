@@ -1,0 +1,20 @@
+#N canvas 542 144 515 444 10;
+#X obj 130 254 osc~;
+#X obj 131 319 dac~;
+#X obj 110 27 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 130 215 5 0 0 0 - - -;
+#X obj 173 77 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 188 148 440;
+#X msg 231 173 0;
+#X text 152 42 Both sliders control frequency;
+#X text 236 149 Set frequency to 440 Hz;
+#X text 261 171 Set frequency to 0 Hz;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;

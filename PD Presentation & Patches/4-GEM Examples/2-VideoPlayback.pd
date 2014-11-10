@@ -1,0 +1,38 @@
+#N canvas 260 144 856 541 10;
+#X obj -381 -123 gemwin;
+#X msg -380 -236 create;
+#X msg -343 -208 destroy;
+#X obj -292 -176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -370 -272 Start Render;
+#X msg 110 -114 open \$1;
+#X obj 110 -150 openpanel;
+#X obj 110 -180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -168 -118 auto \$1;
+#X obj -168 -148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -35 -119 gemhead 1;
+#X obj -31 24 pix_texture;
+#X obj -32 -12 pix_film;
+#X floatatom 111 -74 5 0 0 0 - - -;
+#X obj -29 73 rectangle 4 4;
+#X text 151 -180 Click to open a QuickTime video;
+#X text 161 -73 Move to frames;
+#X text 70 22 Maps to a texture...;
+#X text 71 72 ...which is a rectangle;
+#X text -142 -150 Start/stop;
+#X text -49 -152 Start of render chain;
+#X text 186 -42 comment;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 5 0 12 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 12 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 1;

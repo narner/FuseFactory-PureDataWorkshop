@@ -1,0 +1,26 @@
+#N canvas 580 260 693 504 10;
+#X obj 95 92 mtof;
+#X obj 95 122 osc~;
+#X obj 95 242 *~;
+#X obj 94 279 dac~;
+#X obj 191 119 / 127;
+#X obj 192 153 pack 0 50;
+#X floatatom 243 119 5 0 0 0 - - -;
+#X obj 191 183 line~;
+#X text 99 370 http://en.flossmanuals.net/pure-data/audio-tutorials/controlling-the-synth/
+;
+#X obj 95 53 notein 1;
+#X text 273 146 Puts together two numbers in one message. Target for
+[line~] comes from slider \, and interpolation time is constant 50ms.
+;
+#X text -32 93 Converts MIDI to Hz;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 7 0 2 1;
+#X connect 9 0 0 0;
+#X connect 9 1 4 0;

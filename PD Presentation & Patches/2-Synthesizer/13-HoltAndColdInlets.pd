@@ -1,0 +1,13 @@
+#N canvas 741 254 570 382 10;
+#X obj 61 159 *;
+#X floatatom 61 200 5 0 0 0 - - -;
+#X floatatom 76 109 5 0 0 0 - - -;
+#X floatatom 61 62 5 0 0 0 - - -;
+#X text 139 57 "Hot" input. Changes take effect immediately;
+#X text 142 110 "Cold" input. Changes are stored until input arrives
+in the "hot" side.;
+#X text 137 193 Output only comes when input arrives on "hot" side
+\, so "bang" message causes [*] object to do the calculation;
+#X connect 0 0 1 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 0;

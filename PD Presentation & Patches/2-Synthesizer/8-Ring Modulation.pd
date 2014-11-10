@@ -1,0 +1,23 @@
+#N canvas 747 131 663 555 10;
+#X obj 78 264 *~;
+#X obj 128 207 osc~;
+#X obj 130 142 hsl 128 15 0 5000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 73 362 dac~;
+#X obj 163 334 tabwrite~ ringmod;
+#X obj 163 308 metro 100;
+#X obj 163 280 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 78 75 adc~;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array ringmod 1000 float 0;
+#X coords 0 1 999 -1 200 100 1;
+#X restore 441 191 graph;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 0 0 4 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;

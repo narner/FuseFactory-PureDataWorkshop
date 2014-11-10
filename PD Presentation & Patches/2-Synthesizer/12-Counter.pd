@@ -1,0 +1,31 @@
+#N canvas 706 66 675 462 10;
+#X obj 56 89 metro;
+#X obj 56 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X text 131 34 Turns counter on/off;
+#X obj 56 210 float;
+#X obj 60 376 mod 16;
+#X floatatom 60 427 5 0 0 0 - - -;
+#X floatatom 129 369 5 0 0 0 - - -;
+#X obj 152 209 + 1;
+#X text 208 371 Mumbers coming from our counter will increase endlessley.
+We use a [mod] object to wrap these numbers around from 0 to 15;
+#X obj 83 65 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 300 256;
+#X text 195 88 [metro] sends teh message "bang" at regular intervlas
+\, which area time set in milliseconds on the right. This metro will
+"bang" every 300 milliseconds.;
+#X text 199 211 [float] is an object which stores a Floating Point
+Number on its right hand ("cold" side \, and outputs it when it gets
+the message "bang" on the left hand ("hot") side. Every time this [float]
+gets a bang \, it sends the number stored on the left and gets a new
+number from [+1] \, which is one greater \, to store for the next "bang".
+[float] is often abbreviated as [f].;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 7 0 3 1;
+#X connect 9 0 0 1;

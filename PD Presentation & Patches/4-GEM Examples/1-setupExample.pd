@@ -1,0 +1,12 @@
+#N canvas 665 170 602 434 10;
+#X msg 182 82 create;
+#X msg 201 133 destroy;
+#X obj 179 291 gemwin;
+#X msg 221 195 1;
+#X msg 233 224 0;
+#X text 279 191 start render;
+#X text 285 224 stop render;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;

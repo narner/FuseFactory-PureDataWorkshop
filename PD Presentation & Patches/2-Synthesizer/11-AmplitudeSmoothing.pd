@@ -1,0 +1,36 @@
+#N canvas 444 257 713 536 10;
+#X obj 60 106 osc~;
+#X obj 62 404 dac~;
+#X obj 117 166 tabwrite~ sine;
+#X obj 117 138 metro 100;
+#X obj 117 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 63 34 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array sine 1000 float 0;
+#X coords 0 1 999 -1 200 100 1;
+#X restore 397 50 graph;
+#X obj 62 358 *~;
+#X obj 80 334 line~;
+#X obj 83 213 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 80 245 / 127;
+#X obj 80 288 pack 0 50;
+#X text 186 454 http://en.flossmanuals.net/pure-data/audio-tutorials/amplifier/
+;
+#X text 187 492 https://www.youtube.com/watch?v=I9db3hmA96U;
+#X text 161 280 Puts together two numbers in one message. Target for
+[line~] comes from slider \, and interpolation time is constant 50ms.
+;
+#X connect 0 0 2 0;
+#X connect 0 0 7 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 7 0 1 1;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;

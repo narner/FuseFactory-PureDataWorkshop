@@ -1,0 +1,9 @@
+#N canvas 0 22 481 272 10;
+#X obj 193 47 adc~;
+#X obj 193 101 *~;
+#X obj 193 130 dac~;
+#X obj 208 73 osc~ 3;
+#X text 78 216 Credit to Andy Farnell's "Designing Sound";
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 1;

@@ -1,0 +1,61 @@
+#N canvas 261 30 1013 746 10;
+#X obj 53 32 key;
+#X obj 53 69 trigger float float bang;
+#X obj 53 138 mtof;
+#X obj 53 204 phasor~;
+#X obj 133 205 phasor~;
+#X obj 133 166 * 0.99;
+#X obj 53 251 *~ 0.5;
+#X obj 53 460 vcf~ 220 3;
+#X obj 125 403 line~;
+#X obj 125 374 pack 0 300;
+#X obj 125 346 * 1.5;
+#X obj 125 319 mtof;
+#X obj 125 435 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 54 613 *~;
+#X obj 54 667 dac~;
+#X obj 68 585 vline~;
+#X msg 195 557 1 150 \, 0.9 150 150 \, 0 1000 500;
+#X text 817 28 INPUT STAGE;
+#X text 822 161 OSCILLATOR STAGE;
+#X text 827 325 FILTER STAGE;
+#X text 827 559 AMP STAGE;
+#X text 429 49 For each key press [trigger] will first send a "bang"
+to the AMP STAGE \, then a "float" to the FILTER STAGE \, and another
+"float" to the OSCILLATOR STAGE.;
+#X text 435 193 Change the float from [key] to a frequency in Hz \,
+send it to the first [osc~]. Multiply the frequency in Hz by 0.99 to
+get a slightly detuned frequency and sendit to hte second [osc~]. Add
+teh two [osc~] signals together and multiply by 0.5 to keep from clipping
+later.;
+#X text 427 363 Change the float from [key] to a frequency in Hz \,
+and multiply it by 1.5 so the [vcf~] is a half octabe above the [osc~]
+frequencies. [pack] makes a message with this frequency together with
+500 This tells [line~] "ramp to this number in 500 milliseconds". The
+output of [line~] sweeps the [vcf~] is set to "3".;
+#X text 424 563 Attack = 150 \, Decay = 150 \, Sustain = 200 \, Release
+= 1900 Each "bang" from [trigger] sends a message to [vline~] which
+tells it to makea complex audio ramp. This ramp goes to the Audio Multiplication
+[*~] object and controls the gain of the audio stream.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 11 0;
+#X connect 1 2 16 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 13 0;
+#X connect 8 0 7 1;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 7 2;
+#X connect 13 0 14 0;
+#X connect 13 0 14 1;
+#X connect 15 0 13 1;
+#X connect 16 0 15 0;
+#X coords 0 0 15 1 85 60 0;

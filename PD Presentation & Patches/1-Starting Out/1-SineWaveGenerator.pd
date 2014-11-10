@@ -1,0 +1,8 @@
+#N canvas -122 22 978 702 10;
+#X floatatom 362 97 5 0 0 0 - - -;
+#X obj 359 278 dac~;
+#X text 418 96 Frequency Control;
+#X obj 362 141 osc~;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;

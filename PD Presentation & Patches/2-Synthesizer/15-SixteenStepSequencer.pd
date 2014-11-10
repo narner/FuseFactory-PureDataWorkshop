@@ -1,0 +1,125 @@
+#N canvas 456 135 984 640 10;
+#X obj 66 83 metro;
+#X obj 93 52 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 66 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 66 126 f;
+#X obj 124 125 + 1;
+#X obj 66 170 mod 16;
+#X obj 66 211 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 86 146 f;
+#X obj 62 596 dac~;
+#X obj 64 547 phasor~;
+#X text 194 551 http://en.flossmanuals.net/pure-data/audio-tutorials/step-sequencer/
+;
+#X obj 64 505 mtof;
+#X obj 65 452 f;
+#X obj 81 308 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 115 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 155 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 197 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 244 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 289 311 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 333 311 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 379 311 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 424 313 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 696 308 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 466 314 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 744 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 515 312 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 557 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 604 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 647 310 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 99 452 f;
+#X obj 137 452 f;
+#X obj 176 452 f;
+#X obj 220 453 f;
+#X obj 264 452 f;
+#X obj 309 452 f;
+#X obj 353 452 f;
+#X obj 400 453 f;
+#X obj 444 452 f;
+#X obj 491 453 f;
+#X obj 538 452 f;
+#X obj 580 453 f;
+#X obj 626 454 f;
+#X obj 672 453 f;
+#X obj 722 454 f;
+#X obj 66 276 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 44 0;
+#X connect 9 0 8 0;
+#X connect 9 0 8 1;
+#X connect 11 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 1;
+#X connect 14 0 29 1;
+#X connect 15 0 30 1;
+#X connect 16 0 31 1;
+#X connect 17 0 32 1;
+#X connect 18 0 33 1;
+#X connect 19 0 34 1;
+#X connect 20 0 35 1;
+#X connect 21 0 36 1;
+#X connect 22 0 42 1;
+#X connect 23 0 37 1;
+#X connect 24 0 43 1;
+#X connect 25 0 38 1;
+#X connect 26 0 39 1;
+#X connect 27 0 40 1;
+#X connect 28 0 41 1;
+#X connect 29 0 11 0;
+#X connect 30 0 11 0;
+#X connect 31 0 11 0;
+#X connect 32 0 11 0;
+#X connect 33 0 11 0;
+#X connect 34 0 11 0;
+#X connect 35 0 11 0;
+#X connect 36 0 11 0;
+#X connect 37 0 11 0;
+#X connect 38 0 11 0;
+#X connect 39 0 11 0;
+#X connect 40 0 11 0;
+#X connect 41 0 11 0;
+#X connect 42 0 11 0;
+#X connect 43 0 11 0;
+#X connect 44 0 12 0;
+#X connect 44 1 29 0;
+#X connect 44 2 30 0;
+#X connect 44 3 31 0;
+#X connect 44 4 32 0;
+#X connect 44 5 33 0;
+#X connect 44 6 34 0;
+#X connect 44 7 35 0;
+#X connect 44 8 36 0;
+#X connect 44 9 37 0;
+#X connect 44 10 38 0;
+#X connect 44 11 39 0;
+#X connect 44 12 40 0;
+#X connect 44 13 41 0;
+#X connect 44 14 42 0;
+#X connect 44 15 43 0;

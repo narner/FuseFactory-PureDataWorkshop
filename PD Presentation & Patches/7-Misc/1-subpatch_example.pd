@@ -1,0 +1,14 @@
+#N canvas 784 241 450 300 10;
+#N canvas 357 226 450 300 subpatch_example 0;
+#X obj 199 125 osc~;
+#X floatatom 199 81 5 0 0 0 - - -;
+#X obj 200 190 dac~;
+#X obj 199 48 inlet;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 1 0;
+#X restore 165 119 pd subpatch_example;
+#X floatatom 165 83 5 0 0 0 - - -;
+#X text 213 83 input;
+#X connect 1 0 0 0;
