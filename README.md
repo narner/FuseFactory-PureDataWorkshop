@@ -1,7 +1,7 @@
 FuseFactory-PureDataWorkshop
 ============================
 
-Intro to PD Workshop at Fuse Factory, Columbus OH, 4/27/14
+Intro to PD Workshop at Fuse Factory (http://thefusefactory.org), Columbus OH, 4/27/14
 
 
 
