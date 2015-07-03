@@ -16,6 +16,6 @@ You’re encouraged to read and download some of the other tutorials and example
 
 If you have any questions, feel free to get in touch!
 
-Email: nicholasarner@gmail.com
-Website: nickarner.com
+Email: nicholasarner (at) gmail.com
+Website: www.nickarner.com
 Twitter: @nickarner
